@@ -1,0 +1,22 @@
+function customRender(reactElement, container) {
+        const domElement = document.createElement(reactElement.type);
+        domElement.innerHTML = reactElement.children
+        domElement.setAttribute('href',reactElement.props.href);
+        domElement.setAttribute('target',reactElement.props.target);
+
+        container.append(domElement);
+}
+
+
+const reactElement = {
+        type: 'a',
+        props:{
+                href: 'https://reactjs.org',
+                target:'_blank'
+        },
+        children:'Click me to visit React.org',
+}
+
+const mainContainer = document.querySelector('#root');
+
+customRender(reactElement, mainContainer);
