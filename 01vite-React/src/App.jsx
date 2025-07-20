@@ -2,8 +2,11 @@ import MinuteMaid from "./MinuteMaid"
 
 function App() {
 
-  return (
-    <MinuteMaid/>
+  const username = "Chai aur code"
+  return (<>
+  <MinuteMaid/>,
+  <h1>chai aur code {username}</h1>
+  </>
   )
 }
 
